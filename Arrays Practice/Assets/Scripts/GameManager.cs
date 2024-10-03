@@ -8,14 +8,34 @@ public class GameManager : MonoBehaviour
 
     //Create an array of strings
 
-    public string[] students = new string[7] {"Colin", "Joseph", "Emmanuel", "Lebron", "Justin", "Bella", "Evri"};
+    public string[] students = new string[7] {"Colllin", "Joseph", "Emmanuel", "Lebron", "Justin", "Bella", "Evri"};
 
     private string stu1 = "Colin"; 
+
+    public GameObject[] floors;
+
+    //Make a list of strings
+
+    public List<string> stulist = new List<string>(); 
 
     // Start is called before the first frame update
     void Start()
     {
-        students[6] = stu1;
+        //Change the last student's spelling to stu1
+
+        students[1] = stu1;
+
+        //Add all the students from the array to the list
+        stulist.AddRange(students);
+
+        //Make a new array with all of the students that are here.
+        students = new string[6] { "Colin", "Joseph", "Emmanuel", "Lebron", "Justin", "Bella" };
+
+        //Remove the student that isn't here from the list. 
+        stulist.Remove("Evri");
+
+      
+        //floors = GameObject.FindGameObjectsWithTag("floor")
     }
 
     // Update is called once per frame
