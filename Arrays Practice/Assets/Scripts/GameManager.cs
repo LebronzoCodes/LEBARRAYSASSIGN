@@ -28,12 +28,18 @@ public class GameManager : MonoBehaviour
 
     public Queue<string > stuQueue = new Queue<string>();
 
+    //Make an ArrayList
+
+    public ArrayList stuff = new ArrayList();
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
         //Change the last student's spelling to stu1
 
-        students[1] = stu1;
+        students[0] = stu1;
 
         //Add all the students from the array to the list
         stulist.AddRange(students);
@@ -57,6 +63,11 @@ public class GameManager : MonoBehaviour
 
         Debug.Log(stuStack.Pop());
 
+        stuff.Add("Evri");
+        stuff.Add(7);
+        stuff.AddRange(students);
+
+        Debug.Log(stuff[2].GetType().Name);
 
     }
 
