@@ -41,6 +41,17 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Prints the number of items within the list and the array
+
+        //Lists use Count
+            //Debug.Log(stulist.Count);
+
+        //Array uses Length
+            //Debug.Log(students.Length);
+
+        for (int i = 0; i<students.Length-1; i++)
+        {
+            Debug.Log(students[i]);
+        }
     }
 }
