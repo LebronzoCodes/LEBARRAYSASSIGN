@@ -49,7 +49,8 @@ public class GameManager : MonoBehaviour
         //Array uses Length
             //Debug.Log(students.Length);
 
-        for (int i = 0; i<students.Length-1; i++)
+        //Note: you use students.length - 1 if there is an equals (=, <=, >=), otherwise use just students.length
+        for (int i = 0; i<students.Length; i++)
         {
             Debug.Log(students[i]);
         }
